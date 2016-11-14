@@ -2933,6 +2933,9 @@ def xcode(registry, xml_parent, data):
     XML.SubElement(xcode, 'unlockKeychain').text = str(
         data.get('keychain-unlock', False)).lower()
 
+    XML.SubElement(xcode, 'signIpaOnXcrun').text = str(
+        data.get('sign-ipa-on-xcrun', False)).lower()
+
 
 def sonatype_clm(registry, xml_parent, data):
     """yaml: sonatype-clm
